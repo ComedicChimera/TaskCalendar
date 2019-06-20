@@ -28,7 +28,7 @@ The app has a really simple user interface.  Each button does it was it says it 
 
 ## Building to a Binary
 
-If you need to build to a binary, make sure you have `electron-packager` installed.  Assumming that you do, if you are on Windows, you can just type in `npm run-script build` into the command line and it will produce a binary for you.  If you are not on Windows, go into the `package.json` file and edit the build script to whatever you need for your platform.  You can check out the electron-packager docs [https://www.npmjs.com/package/electron-packager](here).
+If you need to build to a binary, make sure you have `electron-packager` installed.  Assumming that you do, if you are on Windows, you can just type in `npm run-script build` into the command line and it will produce a binary for you.  If you are not on Windows, go into the `package.json` file and edit the build script to whatever you need for your platform.  You can check out the electron-packager docs [here](https://www.npmjs.com/package/electron-packager).
 
 In either case, you will also need to copy the data.json, as well as the icon file into your binary directory.  *Note: The app does not build with an icon so if you want to add one, just convert the icon.png to the appropriate format (this icon is intended for in app use) and attach it to a short cut)*
 
