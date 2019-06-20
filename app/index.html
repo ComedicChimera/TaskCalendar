@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset='utf-8'/>
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet" type="text/css"/>
+
+        <script src="script.js"></script>
+
+        <title>Task Calendar</title>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="title-bar">
+                <span class="title" contenteditable="true"></span>
+                <button class="save">Save</button>
+            </div>
+    
+            <table class="calendar">
+                
+            </table>
+    
+            <div class="bottom-bar">
+                <button class="add-week">Add Week</button>
+                <button class="remove-week">Remove Week</button>
+                <button class="clear-calendar">Clear Calendar</button>
+            </div>
+
+            <script>
+                table = loadTable();
+
+                generateTable();
+    
+                setupListeners();
+            </script>
+        </div>
+    </body>
+</html>

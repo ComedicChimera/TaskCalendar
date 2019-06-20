@@ -1,0 +1,21 @@
+{
+  "name": "task-calendar",
+  "version": "1.0.0",
+  "description": "A task calendar app to help me keep track of things.",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron .",
+    "postinstall": "electron-builder install-app-deps",
+    "build": "electron-packager . TaskCalendar --platform=win32 --arch=x64"
+  },
+  "author": "ComedicChimera",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^5.0.4",
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "electron-packager": "^13.1.1",
+    "electron-rebuild": "^1.7.3"
+  }
+}

@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+
+    overflow: scroll;
+}
+
+.wrapper {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title-bar {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 10px;
+}
+
+.title-bar .title {
+    font-size: 24px;
+    font-weight: bold;
+
+    outline: #20aced;
+}
+
+button {
+    background-color: #bbbbbb;
+    box-shadow: 0px 0px 1px 1px black;
+
+    font-family: 'Open Sans', sans-serif;
+
+    border: none;
+    outline: none;
+
+    padding: 10px;
+
+    font-size: 18px;
+    
+    border-radius: 3px;
+}
+
+button:active {
+    box-shadow: none;
+
+    background-color: #898989;
+}
+
+.title-bar .unsaved {
+    background-color: red;
+    color: white;
+}
+
+table, th, td {
+    border: 1px solid black;
+}
+
+table th {
+    padding: 5px;
+
+    outline: none;
+}
+
+table .entry-box {
+    width: 250px;
+    height: 250px;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    resize: none;
+    border: none;
+    
+    outline: none;
+}
+
+.bottom-bar {
+    padding: 10px;
+}
+
+.bottom-bar button {
+    margin-left: 10px;
+}
