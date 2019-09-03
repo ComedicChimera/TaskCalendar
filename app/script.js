@@ -16,25 +16,25 @@ function generateTable() {
     let days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
 
     for (var day of days) {
-        html += `<th>${day}</th>`
+        html += `<th>${day}</th>`;
     }
 
-    html += '</tr>'
+    html += '</tr>';
 
     let week;
     for (var i in table) {
         week = table[i];
 
-        html += `<tr><th class=\"week-label\" contenteditable=\"true\">${week['week']}</th>`
+        html += `<tr><th class=\"week-label\" contenteditable=\"true\">${week['week']}</th>`;
 
         let dayContent;
         for (var j = 0; j < 7; j++) {
             dayContent = j < week['days'].length ? week['days'][j] : '';
 
-            html += `<td><textarea class=\'entry-box ${i}-${j}\'>${sanitize(dayContent)}</textarea></td>`
+            html += `<td><textarea class=\'entry-box ${i}-${j}\'>${sanitize(dayContent)}</textarea></td>`;
         }
 
-        html += '</tr>'
+        html += '</tr>';
     }
 
     $('table').html(html);
@@ -83,7 +83,7 @@ function setupListeners() {
         saveTable();
 
         $('.save').removeClass('unsaved');
-    })
+    });
 
     $('.add-week').mousedown(() => {
         updateTable();
@@ -103,7 +103,7 @@ function setupListeners() {
         generateTable();
 
         setUnsaved();
-    })
+    });
 
     $('.clear-calendar').mousedown(() => {
         table = [];
@@ -120,4 +120,11 @@ function setupListeners() {
 
     $('.title').bind('input propertychange', setUnsaved);
 
+    $(window).keydown((e) => {
+        if (e.ctrlKey && e.which == 83) {
+            saveTable();
+
+            $('.save').removeClass('unsaved');
+        }
+    });
 }

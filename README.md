@@ -3,7 +3,7 @@ A simple app to help you organize your spare time.
 
 ## Setup
 
-When you download the repo, you will need to create a data file to hold all your info.  This will must be called `data.json` and exist in the main directory of your project.  It should look like this:
+When you download the repo, you will need to create a data file to hold all your info.  This must be called `data.json` and exist in the main directory of your project.  It should look like this:
 
 ```json
 {
